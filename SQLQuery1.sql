@@ -1,1 +1,0 @@
-IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Data' and xtype='U') CREATE TABLE Data (Name NVARCHAR(MAX) not null,Value NVARCHAR(MAX) not null);
