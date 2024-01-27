@@ -1,0 +1,27 @@
+﻿@model JsonViewModel
+
+@{
+    ViewData["Title"] = "My Index";
+}
+
+<h2>Tree View</h2>
+
+@foreach (var rootNode in Model.RootNodes)
+{
+    @Html.Raw(PrintTreeHtml(rootNode))
+}
+
+@functions
+{
+    string PrintTreeHtml(JsonModel node, string indent = "")
+    {
+        var result = $"<div>{indent}{node.KeyName}{(string.IsNullOrEmpty(node.Value) ? "" : $": {node.Value}")}</div>";
+
+        foreach (var child in node.Children)
+        {
+            result += PrintTreeHtml(child, indent + "&nbsp;&nbsp;");
+        }
+
+        return result;
+    }
+}

@@ -1,0 +1,43 @@
+﻿@* @model ConfigurationViewModel
+
+@{
+    ViewBag.Title = "Configuration";
+}
+
+<h2>Configuration</h2>
+
+<div id="tree">
+    <ul>
+        @foreach (var node in Model.Nodes)
+        {
+            RenderTreeNode(node, 0);
+        }
+    </ul>
+</div>
+
+@functions {
+    void RenderTreeNode(TreeNode node, int level)
+    {
+        <li>
+            <span>@new string(' ', level * 2)Key: @node.Key</span>
+            @if (!string.IsNullOrEmpty(node.Value))
+            {
+                <span>, Value: @node.Value</span>
+            }
+            @if (!string.IsNullOrEmpty(node.ParentId))
+            {
+                <span>, ParentId: @node.ParentId</span>
+            }
+            @if (node.Children.Any())
+            {
+                <ul>
+                    @foreach (var childNode in node.Children)
+                    {
+                        RenderTreeNode(childNode, level + 1);
+                    }
+                </ul>
+            }
+        </li>
+    }
+}
+ *@
