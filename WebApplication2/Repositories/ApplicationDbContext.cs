@@ -1,18 +1,23 @@
-﻿using Microsoft.EntityFrameworkCore;
-using WebApplication2.Models;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace WebApplication2.Repositories
 {
-    public class YourDbContext : DbContext
+    public class ApplicationDbContext 
     {
-        public DbSet<ConfigurationModel> ConfigurationModels { get; set; }
+       
+        private readonly string _connectionString;
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public ApplicationDbContext(IConfiguration configuration)
         {
-            // Встановіть з'єднання з вашою базою даних
-            string connectionString = "Data Source=LAPTOP-CDCD3ABD\\BCDEMO;Initial Catalog=mydb;Integrated Security=true;TrustServerCertificate=True;";
+            _connectionString = configuration.GetConnectionString("MyDbConnection");
+        }
 
-            optionsBuilder.UseSqlServer(connectionString);
+        public SqlConnection GetConnection()
+        {
+            SqlConnection connection = new SqlConnection(_connectionString);
+            connection.Open();
+            return connection;
         }
     }
 }
