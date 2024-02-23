@@ -27,9 +27,9 @@ git clone https://github.com/vr242kj/GFL.NET.git
 - JSON (Configuration File Format)
 ## How it Works
 1. Upload JSON Configuration
-   - Use the web interface to upload a JSON configuration file. I use Postman API. Here is my [Json collection](https://www.postman.com/aerospace-astronomer-15181326/workspace/library-postman/collection/15327265-658037de-857e-4988-b07d-88b38e522410?action=share&creator=15327265&active-environment=15327265-2bba51c3-b3f0-423b-98ea-d90559a57456)
+   - Use the web interface to upload a JSON configuration file. I use Postman API. Here is my [Json collection](https://www.postman.com/aerospace-astronomer-15181326/workspace/library-postman/collection/15327265-658037de-857e-4988-b07d-88b38e522410?action=share&creator=15327265&active-environment=15327265-2bba51c3-b3f0-423b-98ea-d90559a57456)\
      **In requests change localhost value**.
 2. Database Storage
    - The system reads the file, transforms the configuration into a programmatic model, and stores it in the MSSQL database.
-3.  Hierarchical View
+3. Hierarchical View
    - The stored configuration can be viewed on the web page in a hierarchical tree structure.
