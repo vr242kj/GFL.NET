@@ -13,14 +13,14 @@ This project aims to create a web application that takes a configuration file in
 ## Getting Started
 1.  Clone the repository to your local machine.
 ```bash
-git clone https://github.com/vr242kj/GFL.NET.git
+      git clone https://github.com/vr242kj/GFL.NET.git
 ```
 3.  Open the solution in Visual Studio or your preferred IDE.
 4.  Configure MSSQL Database
-   - Set up a MSSQL database and update the connection string in the appsettings.json file.
-   - In folder Repositories in file TableName.cs change the name of table you have used.
+      - Set up a MSSQL database and update the connection string in the appsettings.json file.
+      - In folder Repositories in file TableName.cs change the name of table you have used.
 5.  Run the application.
-   - Launch the web application and navigate to the specified URL (default: `https://localhost:5000`).
+      - Launch the web application and navigate to the specified URL (default: `https://localhost:5000`).
 ## Technologies Used
 - ASP.NET Core 8 MVC
 - MSSQL (Relational Database)
