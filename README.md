@@ -1,9 +1,8 @@
 
 # Web Application for Json parsing
-
- The primary objective of this project is to develop a web application capable of processing JSON-formatted configuration files **with varying levels of complexity and nesting**.\
- The system should read the file, transform the configuration into a programmatic model, and then store it in a relational database (specifically MSSQL).\
- The ultimate goal is to display the stored configuration from the database on the screen in the form of a hierarchical tree.
+1. The primary objective of this project is to develop a web application capable of processing JSON-formatted configuration files **with varying levels of complexity and nesting**.\
+2. The system should read the file, transform the configuration into a programmatic model, and then store it in a relational database (specifically MSSQL).\
+3. The ultimate goal is to display the stored configuration from the database on the screen in the form of a hierarchical tree.
 
 ## Project Components
 1. **Relational Database (MSSQL)**
