@@ -1,5 +1,5 @@
 
-# Web Application for Configurations Management
+# Web Application for Json parsing
 
 This project aims to create a web application that takes a configuration file in JSON format as input **(the complexity/nesting of the configuration can vary)**. The system should read the file, transform the configuration into a programmatic model, and then store it in a relational database (specifically MSSQL). The ultimate goal is to display the stored configuration from the database on the screen in the form of a hierarchical tree.
 
